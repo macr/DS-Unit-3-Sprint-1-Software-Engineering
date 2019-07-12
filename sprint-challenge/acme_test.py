@@ -79,11 +79,14 @@ class AcmeReportTests(unittest.TestCase):
         price_match = [(str(mean_price) in arg and 'price' in arg.lower())
                        for arg in args]
         unique_names = [
-            (str(unique_product_names) in arg and 'unique' in arg.lower()) for arg in args]
+            (str(unique_product_names) in arg and 'unique' in arg.lower())
+            for arg in args]
         flammability_match = [
-            (str(mean_flammability) in arg and 'flammability' in arg.lower()) for arg in args]
+            (str(mean_flammability) in arg and 'flammability' in arg.lower())
+            for arg in args]
         weight_match = [
-            (str(mean_weight) in arg and 'weight' in arg.lower()) for arg in args]
+            (str(mean_weight) in arg and 'weight' in arg.lower())
+            for arg in args]
         self.assertTrue(any(price_match))
         self.assertTrue(any(unique_names))
         self.assertTrue(any(flammability_match))
