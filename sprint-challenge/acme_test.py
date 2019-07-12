@@ -74,6 +74,8 @@ class AcmeReportTests(unittest.TestCase):
         # Check that we pass the calculated values above to `print`
         # Check each line if it contains the value we are checking for and
         # a matching keyword to make sure it is on the same line.
+        # This way we can change some of the wordings on the report
+        # without breaking the test
         price_match = [(str(mean_price) in arg and 'price' in arg.lower())
                        for arg in args]
         unique_names = [
